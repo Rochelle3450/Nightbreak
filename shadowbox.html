@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow Box</title>
+    <style>
+        body { background: #000000; color: white; text-align: center; }
+        .warning { background: red; padding: 20px; font-size: 1.2rem; }
+    </style>
+    <script>
+        function enterShadowBox() {
+            document.getElementById('warning').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <div id="warning" class="warning">
+        <p>Are you sure you want to see this page?</p>
+        <button onclick="enterShadowBox()">Yes</button>
+        <button onclick="history.back()">No</button>
+    </div>
+    <div id="content" style="display: none;">
+        <h1>Shadow Box</h1>
+        <p>A space for your darkest thoughts, photos, and emotions.</p>
+    </div>
+</body>
+</html>
